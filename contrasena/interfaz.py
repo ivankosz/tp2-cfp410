@@ -15,11 +15,10 @@ try:
     class VentanaSecundaria():
 
         def __init__(self, lista) -> None:
-            self.ventana2= tk.Tk()
+            self.ventana2= tk.Toplevel()
             self.ventana2.config(width=ANCHO, height=ALTO)
             self.ventana2.title("Contraseñas Generadas")
-            print(lista)
-            self.list_box=tk.Listbox(self.ventana2)
+            self.list_box=tk.Listbox(self.ventana2, height=len(lista), )
             self.list_box.insert(END,*lista)
             self.list_box.pack()
 
